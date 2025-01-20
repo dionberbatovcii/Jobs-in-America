@@ -1,0 +1,360 @@
+<!-- I am Jona Berbatovci and I declare that the code below for the home page of this website is written by me and not by other sources. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <!-- link for icons used in the footer are found in the link below -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- the fonts are found the link below -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepagestyle.css">
+    <title>Home Page | JourneyJobs USA</title>
+
+</head>
+
+<body>
+
+    <!-- navigation bar section-->
+    <div class="navbar">
+
+        <!-- logo  -->
+        <div class="logo">
+            <img class="jobimage" src="images/logo.png" alt="JourneyJobs USA Logo">
+        </div>
+
+        <!-- hamburger menu for smaller devices -->
+        <div class="hamburger" onclick="hamburgerMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- the menu links used in the navigation -->
+        <div class="menu">
+            <a href="services.html">Services</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="applynow.html">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- back to top button -->
+    <button id="backToTop"
+        aria-label="Back to Top">&#8679;<!--unicode for white arrow in the fixed red button at the right bottom--></button>
+
+    <!-- hero section start -->
+    <div class="heroSection">
+        <div class="herotext">DISCOVER THE LAND OF OPPORTUNITIES</div><br>
+        <a class="ctalink" href="applynow.html">Apply now</a>
+    </div>
+
+    <!-- elements under the hero section -->
+    <div class="underHero">
+        <div class="item1">
+            Culture Exchanges
+        </div>
+
+        <div class="item2">
+            Visa and Travel Planning
+        </div>
+
+        <div class="item3">
+            Job Opportunities
+        </div>
+    </div>
+
+    <!-- information regarding the company (WHAT WE DO) -->
+    <div class="whatwedo">
+        <!-- image of the plane -->
+        <img class="plane1" src="images/plane.svg" alt="planeicon">
+        <div class="wetext">WHAT WE DO
+            <!-- paragraphs in 2 colums about the company -->
+            <div class="wepara">
+                <div>The Work and Travel USA program by JourneyJobs USA gives international students and young adults
+                    the opportunity to live, work, and explore the United States. Participants gain hands-on experience
+                    in industries like hospitality, retail, and seasonal work, earning money to fund their travels while
+                    fully immersing themselves in American culture. From vibrant resorts in California to ski lodges in
+                    Colorado, every job offers a unique and rewarding
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    JourneyJobs USA provides full support, guiding you through the visa process, helping with job
+                    placement, and offering 24/7 assistance to ensure your journey is smooth and stress-free.
+                    Beyondwork, participants can explore iconic destinations and create unforgettable memories.
+                    Combining professional growth, cultural exchange, and adventure, JourneyJobs Work and Travel USA
+                    program is truly a life-changing experience.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- top destinations and jobs -->
+    <div class="explore">Explore Top Destinations and Jobs</div>
+
+    <!-- displayed boxes with the destinations and jobs -->
+    <div class="cardcontainer">
+        <!-- first box with the destination and job -->
+        <div class="card1">
+            <div class="pic">
+                <img class="rectangle" src="images/retailCustServ.jpg" alt="DestinationImage" />
+            </div>
+            <div class="back">
+                <div class="place">New York, KFC barista</div>
+                <div class="age">24-40 y/o</div>
+                <div class="duration">6-25 months</div>
+                <div class="stars">
+                    <!-- unicode star icons-->
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- second box with the destination and job -->
+        <div class="card1">
+            <div class="pic">
+                <img class="rectangle" src="images/amusementpark.png" alt="DestinationImage" />
+            </div>
+            <div class="back">
+                <div class="place">Ohio, Amusement park</div>
+                <div class="age">21-35 y/o</div>
+                <div class="duration">2-5 months</div>
+                <div class="stars">
+                    <!-- unicode star icons-->
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- third box with the destination and job -->
+        <div class="card1">
+            <div class="pic">
+                <img class="rectangle" src="images/LAcasinoHost.png" alt="DestinationImage" />
+            </div>
+            <div class="back">
+                <div class="place">L.A, Casino host</div>
+                <div class="age">18-30 y/o</div>
+                <div class="duration">4-7 months</div>
+                <div class="stars">
+                    <!-- unicode star icons-->
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- foruth box with the destination and job -->
+        <div class="card1">
+            <div class="pic">
+                <img class="rectangle" src="images/landscaping.jpg" alt="DestinationImage" />
+            </div>
+            <div class="back">
+                <div class="place">Madison, Tour guide</div>
+                <div class="age">25-40 y/o</div>
+                <div class="duration">6-25 months</div>
+                <div class="stars">
+                    <!-- unicode star icons-->
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- fifth box with the destination and job -->
+        <div class="card1">
+            <div class="pic">
+                <img class="rectangle" src="images/californiaLifeguard.jpg" alt="DestinationImage" />
+            </div>
+            <div class="back">
+                <div class="place">California, Lifeguard</div>
+                <div class="age">18-35 y/o</div>
+                <div class="duration">5-36 months</div>
+                <div class="stars">
+                    <!-- unicode star icons-->
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- the link to check for more destinations and jobs ("See More") -->
+    <div class="linkmorecards">
+        <a href="services.html">See more</a>
+    </div>
+
+
+    <!-- statistics section -->
+    <div class="firstblockblue">15731+
+        <div class="hapCli">Happy Clients</div>
+    </div>
+    <div class="blockred"></div>
+    <div class="blockwhite"></div>
+    <div class="blockblue">
+        <div class="num1">
+            75% <div>extended their stay</div>
+        </div>
+        <div class="num2">
+            90% <div>would recommend our program</div>
+        </div>
+        <div class="num3">
+            95% <div> statisfaction rate</div>
+        </div>
+    </div>
+
+    <!-- testimonial section -->
+    <div class="particSay">What our Participants Say</div>
+
+    <div class="participants-say-section">
+        <div class="content">
+            <div class="image-container">
+                <img src="images/participantsImage.jpeg" alt="Participants">
+            </div>
+            <div class="testimonials">
+
+                <!-- first testimonial card -->
+                <div class="testimonial">
+                    <div class="testimonial-card">
+                        <p class="participant-name">Albi Mustafa, Peja</p>
+                        <p class="testimonial-text">
+                            "This program was a life-changer! I improved my English, made lifelong friends, and saved
+                            enough to travel to New York after my contract. The Work and Travel team made everything so
+                            easy, from finding a job to handling paperwork. I can't thank them enough!"
+                        </p>
+                    </div>
+                </div>
+                <!-- second testimonial card -->
+                <div class="testimonial">
+                    <div class="testimonial-card">
+                        <p class="participant-name">Elsa Gashi, Prizren</p>
+                        <p class="testimonial-text">
+                            "The Work and Travel USA program helped me step out of my comfort zone. From working as a
+                            lifeguard in Florida to exploring the beautiful national parks, every moment was
+                            unforgettable. The support team was always available, making my experience seamless and
+                            enjoyable."
+                        </p>
+                    </div>
+                </div>
+                <!-- third testimonial card -->
+                <div class="testimonial">
+                    <div class="testimonial-card">
+                        <p class="participant-name">Elena Berisha, Gjakova</p>
+                        <p class="testimonial-text">
+                            "I participated in the program last summer and worked as a camp counselor in Maine. It was
+                            one of the best experiences of my life. I built connections, developed leadership skills,
+                            and explored the U.S. The team's assistance made everything stress-free. Highly
+                            recommended!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- call to action to start the joruney and apply -->
+    <div class="start">START YOUR JOURNEY NOW!</div>
+    <a class="ctalink2" href="applynow.html">Apply now</a>
+
+    <!-- flag image -->
+    <img class="flag" src="images/flagusa.png" alt="usaflag">
+
+    <!-- contact, address, working hours, phone information section -->
+    <div class="cont1">
+        <div class="cont2">
+
+            <!-- box for address -->
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Office:</strong></p>
+                <p>21 Shpetim Robaj, Pristina</p>
+            </div>
+
+            <!-- box for email -->
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong></p>
+                <a class="email" href="mailto:info@journeyjobs.com">info@journeyjobs.com</a>
+            </div>
+
+            <!-- box for phone number -->
+            <div class="info-box">
+                <i class="fas fa-phone"></i>
+                <p><strong>Phone:</strong></p>
+                <p>+1 (123) 456-7890</p>
+            </div>
+
+            <!-- box for working hours -->
+            <div class="info-box">
+                <i class="fas fa-clock"></i>
+                <p><strong>Working Hours:</strong></p>
+                <p>8:00-16:00 Mon-Fri</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer with links to page content -->
+    <div class="col1">
+        <img class="logo2" src="images/logo.png" alt="logo">
+        <div class="col1mid">
+            <!-- links of the website found in the footer -->
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="applynow.html">Apply now</a></li>
+            </ul>
+        </div>
+        <div class="col1left">
+            <ul>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- copyright notice -->
+    <div class="copy">Copyright Notice &copy; 2024 JourneyJobs USA. All Rights Reserved.</div>
+
+
+    <script>
+        // makes the hamburger menu appear using a function
+        function hamburgerMenu() {
+            var hamMenu = document.querySelector(".menu"); // selects the menu class and stores it to a varibale
+            hamMenu.classList.toggle('active'); // toggles the 'active' class
+        }
+
+        //make the variable so that the red fixed button placed at the right bottom when clicked, will send the user bacck to the top
+        var backToTopButton = document.getElementById("backToTop");
+        //listen to the event, so when the button is clicked it will scroll back to the top
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth" //smoothly scrolls back to the top 
+            });
+        });
+
+    </script>
+</body>
+
+</html>
