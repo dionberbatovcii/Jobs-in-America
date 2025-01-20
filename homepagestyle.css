@@ -1,0 +1,1247 @@
+/* I am Jona Berbatovci and I declare that the code below for the home page of this website is written by me and not by other sources. */
+
+body {
+    /* here i took off the margin so there is no unnecessary white space around the page */
+    margin: 0;
+    /* here i made sure that things that go out of width of the page to be hidden  */
+    overflow-x: hidden;
+    /* here i set the font for the elements that do not have the font set already */
+    font-family: Arial, sans-serif;
+}
+
+/* here starts the navigation bar styling */
+.navbar {
+    /* here i created a fixed navigation bar at the top with a high index with a flexbox layout (displayed in one line) and styled it how i want */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E2B55;
+    padding: 12px 20px;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    /* here i vertically center the image using flexbox layout */
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    /* styled the image to make it adapt to the other elements of the page */
+    height: 100px;
+    margin-right: 10px;
+    padding: 0;
+    width: 230px;
+}
+
+.navbar .menu {
+    /* place space at the right of the menu  */
+    margin-right: 4.5%;
+    font-family: Fira Sans;
+}
+
+.navbar .menu a {
+    /* styled the menu links */
+    color: #eaedf7;
+    text-decoration: none;
+    font-size: 0.95em;
+    text-align: center;
+    padding-left: 60px;
+
+}
+
+.navbar .menu a:hover {
+    /* stlyed what it would look like when the mouse is over the links in the navigation bar */
+    color: lightcoral;
+}
+
+.hamburger {
+    /* make the hamburger element invisible and not take up space and make the divs appear on top of each other with spaces between them */
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+
+}
+
+.hamburger div {
+    /* give the dimensions of the 3 divs and color */
+    width: 25px;
+    height: 3px;
+    background-color: #eaedf7;
+
+}
+
+/* give responsive styles to the naviagtion bar (navbar) and elements inside of it*/
+/* changed the styling, positioning, display for when the page gets smaller */
+@media (max-width: 760px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #0E2B55;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        padding-right: 5px;
+        border-radius: 5px;
+        border: white solid medium;
+
+    }
+
+    .navbar .menu.active {
+        /* we show the menu when its active */
+        display: flex;
+
+    }
+    
+    .navbar .menu a {
+        padding: 5px 5px;
+        margin-right: 10px;
+        width: 100%;
+
+    }
+
+    .hamburger {
+        /* and make the hamburger appear when the page gets smaller */
+        display: flex;
+        margin-right: 10%;
+    }
+}
+
+
+/* here ends the navigation bar styling */
+
+
+/* here starts the hero section styling of the page */
+
+.heroSection {
+    width: 100%;
+    height: 86vh;
+    background-color: #0E2B55;
+    padding-top: 100px;
+    /*i set the padding enough so the hero section would appear under the fixed nagivator bar*/
+    background-image: url(images/newYorkStatue.jpg);
+    /* correctly position the image so it looks nice by positioning it on the top and making it cover the image without keeping its proportions and not repeating */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-bottom: 1%;
+}
+
+.herotext {
+    /* i set the styling for a large white text to appear below the navigation bar */
+    font-family: poppins, rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4.73em;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    /* increased the line height a bit for a nicer look */
+    padding-left: 2%;
+    margin-top: -3%;
+}
+
+/* responsive styling for the large text in the hero section */
+@media (max-width: 1200px) {
+    .herotext {
+        /* reduced the font size for screens and set more space from the left side*/
+        font-size: 3.5em;
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 900px) {
+    .herotext {
+        /* reduced the font size again*/
+        font-size: 2.6em;
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .herotext {
+        font-size: 2.5em;
+        /* reduced the font size again and the width and top margin of it to make it adjust the page more*/
+        padding-left: 3%;
+        margin-top: -2%;
+        width: 90%;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 400px) {
+    .herotext {
+        font-size: 1.7em;
+        /* reduced the font size again*/
+        padding-left: 3.5%;
+        margin-top: -1%;
+        width: 60%;
+    }
+}
+
+/* here is the link below the text for people to apply as soon as they enter the page */
+.ctalink {
+    margin-left: 2%;
+    margin-top: 1%;
+    padding: 10px 28px;
+    padding-bottom: 10px;
+    /* i made it have some space from the elements around it and the left side of the border */
+    background-color: #ff0000;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    border: none;
+    text-decoration: none;
+    border-radius: 14px;
+    cursor: pointer;
+    /*changed the cursor when people have their cursor on the element*/
+    transition: background-color 0.2s ease;
+    /*made the transition of the colors be smooth when its hovered*/
+    display: inline-block;
+    height: 5%;
+    /* changed the display so i can give it some height */
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.ctalink:hover {
+    background-color: rgb(205, 12, 12);
+    transform: scale(1.04);
+    transition: transform 0.5s ease;
+    /* made the element larger and change colours when hovered and made it smooth with transitions */
+}
+
+/* made responsive styles for the link when the page gets smaller*/
+@media (max-width: 900px) {
+    .ctalink {
+        font-size: 1em;
+        /* smaller font and different positions using margin and padding */
+        margin-left: 3.5%;
+        margin-top: 1%;
+        padding: 8px 25px;
+        padding-bottom: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ctalink {
+        /* smaller font and different positions using margin and padding */
+        font-size: 0.9em;
+        padding: 7px 20px;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .ctalink {
+        /* smaller font and different positions using margin and padding ad width*/
+        font-size: 0.6em;
+        padding: 5px 15px;
+        margin-left: 4%;
+        margin-top: 10px;
+        width: 30%;
+    }
+}
+
+/* here ends the hero section of the page */
+
+
+
+/* here starts the red boxes found under the hero section */
+
+.underHero {
+    /* created 3 columns with gaps between them and space inside the from the border to content */
+    column-count: 3;
+    column-gap: 20px;
+    padding: 30px;
+    margin-top: -5.5%;
+    /* made them overlap with the herosection */
+}
+
+.underHero>div {
+    /* styling of the divs to make them appear nice */
+    background-color: red;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3), inset -5px -5px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    height: 20%;
+    font-weight: 550;
+
+
+}
+
+/* responsive styling for the boxes */
+@media (max-width: 1000px) {
+    .underHero>div {
+        padding: 40px;
+        height: 20%;
+        /* change the styling of each box(div) */
+
+    }
+}
+
+@media (max-width: 900px) {
+    .underHero {
+        margin-top: -9%;
+        /* changed margin top to make the box appear a bit on top of the head section when the page gets smaller */
+    }
+
+    .underHero>div {
+        margin: auto;
+        margin-bottom: 20px;
+        width: 50%;
+        height: 25%;
+        /* changed styles based on the page, the centering of the elements, the bottom space outside the border, and dimensions */
+    }
+}
+
+@media (max-width: 600px) {
+    .underHero {
+        /* since the page gets too small, the columns now appear in a single column with margin top making it appear still above the hero section a bit*/
+        column-count: 1;
+        margin-top: -10%;
+    }
+
+    .underHero>div {
+        /* same styling as in max-width 900 for the divs */
+        margin: auto;
+        margin-bottom: 20px;
+        width: 50%;
+        height: 25%;
+
+    }
+}
+
+/* here ends the styling of the boxes under the hero section */
+
+
+
+/* here starts the styling of the information about the company section*/
+
+.whatwedo {
+    /* made the element center horizontally and vertically and added styles*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* the styling of the text WHAT WE DO (header) found in the page */
+.wetext {
+    /* large bold text since it is considered the header of the content */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 5px;
+    /* spacing outside the element above and below it */
+    color: #0E2B55;
+}
+
+/* the styling of the 2 paragraphs below the "WHAT WE DO" text */
+.wepara {
+    /* made a red line between the paragraphs and the text on top of it  */
+    border-top: #ff0000 solid;
+    padding-top: 2%;
+    font-size: 0.44em;
+    line-height: 1.4;
+    /* increased line height for better readability */
+    color: black;
+    max-width: 80%;
+    margin: 1% auto 7%;
+    /* center the paragraph with 1 precent margin space on the top and 7 on the bottom*/
+    font-weight: 500;
+    /* seperated the text into 2 columns with space between them and a blue line also */
+    column-count: 2;
+    column-gap: 5%;
+    column-rule: #0E2B55 solid 1.93px;
+    font-family: Playfair;
+}
+
+
+/* the styling of the plane and the animation so it can make the home page seem more interactive */
+.plane1 {
+    color: red;
+    position: absolute;
+    /* positioning relative to the container*/
+    width: 50px;
+    /*size of the plane*/
+    ;
+    animation: moveAcrossScreen 10s linear infinite;
+    /* make the animation infinite */
+}
+
+/* Keyframes for the plane to move from the outside of the left side straight to the outside of the right side and repeat */
+@keyframes moveAcrossScreen {
+    0% {
+        transform: translateX(-55vw) translateY(34vh);
+        /* start outside the leftside of the browser */
+    }
+
+    25% {
+        transform: translateX(-25vw) translateY(35.5vh);
+        /* move in a striaght line horizontally to the right*/
+    }
+
+    50% {
+        transform: translateX(0) translateY(35.5vh);
+        /* continue */
+    }
+
+    75% {
+        transform: translateX(25vw) translateY(35.5vh);
+        /* continue moving */
+    }
+
+    100% {
+        transform: translateX(55vw) translateY(35.5vh);
+        /* exits outside the right side of the browser*/
+    }
+}
+
+/* the plane is only displayed when the page is more than 900 pixels */
+@media (max-width: 900px) {
+    .plane1 {
+        display: none;
+    }
+}
+
+
+
+/*responsive styling of the text about the company*/
+@media (max-width: 900px) {
+    .wetext {
+        font-size: 2em;
+        /* reduced header font size */
+    }
+
+    .wepara {
+        font-size: 0.5em;
+        /* adjusted paragraph font size */
+        max-width: 70%;
+        /* made the paragraph more wider to not make the website seem empty when the page gets smaller */
+        column-count: 1;
+        /* turn it into one column  */
+
+    }
+}
+
+@media (max-width: 768px) {
+    .wetext {
+        font-size: 2em;
+        /* reduced header font size */
+        margin-top: 4.5%;
+        padding-top: 1%;
+    }
+
+    .wepara {
+        font-size: 0.5em;
+        /* adjusted paragraph font size */
+        max-width: 80%;
+        /* allow even more width for the paragraph */
+        /* set the spacing outside and inside the element to make the paragraph look in place and neat when the page is smaller */
+        margin-bottom: 15%;
+        margin-top: 6%;
+        padding-top: 1%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wetext {
+        font-size: 1.7em;
+        /* reduced font size for the header text*/
+    }
+
+    .wepara {
+        font-size: 0.5em;
+        padding-top: 1%;
+        /* smaller font and some top padding */
+
+    }
+}
+
+/* here ends the styling of the information about the company section*/
+
+
+
+
+
+/* here starts the styling of most popular destinations and jobs*/
+
+
+/* the styling of the text of that section beginning in the section: 'Explore Top Destinations and Jobs" */
+.explore {
+    font-family: poppins, rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5em;
+    font-weight: 750;
+    color: #0E2B55;
+    /* large text with weight */
+    padding-bottom: 2%;
+    padding-left: 2%;
+    margin-top: 2%;
+    /* spacing inside and outside the element to adjust the position */
+
+}
+
+
+/*responsive styling of the text above the boxes of the destions and jobs*/
+@media (max-width: 900px) {
+    .explore {
+        font-size: 2.3em;
+        /* reduced font size for smaller screens and more padding to the left*/
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .explore {
+        font-size: 2em;
+        /* smaller font size */
+        padding-left: 3%;
+        margin-top: -2%;
+        width: 90%;
+        /* different dimensions to adjust the page */
+        line-height: 1.5;
+        /* more readability */
+    }
+}
+
+@media (max-width: 400px) {
+    .explore {
+        font-size: 1.7em;
+        /* reduced font size and different adjustments made*/
+        padding-left: 3.5%;
+        margin-top: -1%;
+        width: 60%;
+    }
+}
+
+
+/* this is where the styling of the boxes with the destination and job begins */
+.cardcontainer {
+    /* i apply a grid layout here and make each box appear next to each other */
+    display: grid;
+    grid-auto-flow: column;
+    /* i use overflow so we can scroll through the boxes to view the destination and jobs */
+    overflow: auto;
+}
+
+
+
+.cardcontainer::-webkit-scrollbar {
+    /* here i used the pseudo element scrollbar and the prefix for browsers liek chrome,safari, and edge to make the scrollbar disappear  */
+    display: none;
+}
+
+
+
+.card1 {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    margin: 20px;
+    /* set the width and height of the boxes, and the margin for space between each box */
+    border-radius: 16px;
+    /* rounded corners */
+    overflow: hidden;
+    /* hide anything that overflows */
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.2), -4px -5px 10px rgba(0, 0, 0, 0.2);
+    font-family: Playfair;
+}
+
+.card1:hover {
+    transform: scale(1.02);
+    transition: transform 0.5 ease;
+}
+
+.card1 .pic {
+    width: 100%;
+    /* takes up the whole width of its container */
+    height: 70%;
+    /* fills in only 70% of the container for the image, so the part left we write the description of the job and destination */
+    position: relative;
+}
+
+.card1 .rectangle {
+    /* this styles the image inside its container(.pic) */
+    width: 100%;
+    height: 100%;
+    /* stretches the image till 100% */
+    object-fit: cover;
+    /* cover the image without changing the proportions or stretching or cutting */
+    border-radius: 16px 16px 0 0;
+}
+
+.card1 .back {
+    width: 100%;
+    height: 30%;
+    /* the space left for the text after styling the image height */
+    background-color: #0E2B55;
+    border-radius: 0 0 16px 16px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    /* some padding for the text to appear neat inside */
+}
+
+.card1 .place {
+    /* styling of the text for the location of the job */
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: white;
+}
+
+.card1 .age,
+.card1 .duration {
+    font-size: 0.85em;
+    /* smaller font size compared to the text that tells the location */
+    font-weight: 700;
+    color: white;
+    margin-left: 3px;
+}
+
+.card1 .age {
+    /* space above the text that tells the age */
+    margin-top: 8px;
+}
+
+.card1 .duration {
+    /* space above the text that tells the duration of the job */
+    margin-top: 5px;
+}
+
+/* this part styles the stars (rating) of the destinations and jobs */
+.card1 .stars {
+    margin-right: 20px;
+    margin-top: 5px;
+    text-align: right;
+    /* adjustments for spacing and alignment for the stars to look cood inside the container */
+    font-size: 24px;
+    color: gold;
+    line-height: 1;
+}
+
+/* link to go to another page and see more destinations and jobs; and information regarding them */
+.linkmorecards {
+    margin-bottom: 3.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*responsive styling of the text below the boxes that show the destiantions and jobs*/
+@media (max-width: 900px) {
+    .linkmorecards {
+        font-size: 0.9em;
+        margin-left: 1.1%;
+        /* reduced font size and more left spacing outside the element to be in line with the other elements*/
+    }
+}
+
+@media (max-width: 600px) {
+    .linkmorecards {
+        font-size: 0.7em;
+        margin-left: 1.8%;
+        /* reduced font size and more left spacing outside the element to be in line with the other elements*/
+    }
+}
+
+@media (max-width: 400px) {
+    .linkmorecards {
+        font-size: 0.6em;
+        margin-left: 2.2%;
+        /* reduced font size and more left spacing outside the element to be in line with the other elements*/
+    }
+}
+
+/* styling of the text of the link below the boxes of destinations and jobs, and it shows the client to the services page when clicked */
+.linkmorecards a {
+    color: red;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    margin-top: 0.3%;
+    margin-bottom: 5%;
+    /* spacing inside and outside of the elemetn until it suits the page */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    /* no line underneath like default links have */
+
+}
+
+/* styling of the text of the link below the boxes of destinations and jobs when it is hovered*/
+.linkmorecards a:hover {
+    color: darkred;
+    font-weight: 600;
+    transition: font-weight 0.3 ease;
+    /* make the change of the colour smooth */
+}
+
+/* here ends the styling of most popular destinations and jobs*/
+
+
+
+/* here starts the styling of displaying the statistics for the company*/
+
+/* here is the styling of the first blue block that can be found on the page that has the numbers "15731+" */
+.firstblockblue {
+    background-color: #0E2B55;
+    width: 100%;
+    min-height: 20vh;
+    font-size: 9em;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* center the content vertically and horizontally, and aligning its child elements in a vertical column */
+    padding: 20px 0;
+    /* added vertical padding */
+}
+
+.hapCli {
+    /* styles the text "Happy Clients" found below the number 15731+*/
+    color: white;
+    font-size: 0.22em;
+    font-family: Lora;
+}
+
+.blockred {
+    /* thin red block */
+    background-color: red;
+    width: 100%;
+    height: 2vh;
+}
+
+.blockwhite {
+    /* thin white block */
+    background-color: white;
+    width: 100%;
+    height: 2vh;
+}
+
+.blockblue {
+    /* block for spacing 3 statistics */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #0E2B55;
+    width: 100%;
+    height: 25vh;
+    /* takes up 25 percent of the viewport height */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* used flexbox layout for even space between elements, center vertically, wrap the text to the next row if these isnt space enough */
+    padding: 20px 10px;
+    /* space inside element, 20 pixel vertical, 10 pixels horizontal */
+}
+
+.blockblue>div {
+    width: 30%;
+    /* set each div to 30% width, so they fit in the container with space between them */
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-family: Lora;
+}
+
+.blockblue>div div {
+    font-size: 0.8em;
+    font-family: Lora;
+    /* smaller font so the percentages have more attention */
+}
+
+@media (max-width: 768px) {
+    .firstblockblue {
+        font-size: 6em;
+        /* reduced font size */
+    }
+
+    .blockblue {
+        flex-direction: column;
+        height: auto;
+        /* switched to column to the statistics will stack on top of each other and the height depends on the text */
+    }
+
+    .blockblue>div {
+        width: 100%;
+        /* each div occupies a full row */
+        font-size: 1em;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .firstblockblue {
+        font-size: 4em;
+        /* reduced font size */
+    }
+
+    .hapCli {
+        font-size: 0.3em;
+        /* reduced font size */
+    }
+}
+
+/* here ends the styling of displaying the statistics for the company*/
+
+
+
+/* here starts the styling of testimonials of participants for the company*/
+
+.particSay {
+    font-family: poppins, rubik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.8em;
+    font-weight: 750;
+    /* large bold text  */
+    color: #0E2B55;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    margin-top: 4%;
+}
+
+
+@media (max-width: 1030px) {
+    .particSay {
+        font-size: 2.2em;
+        text-align: center;
+        /* reduced font size and aligned in center the text*/
+
+    }
+}
+
+@media (max-width: 600px) {
+    .particSay {
+        font-size: 1.9em;
+        text-align: center;
+        /* reduced font size and aligned in center the text*/
+    }
+}
+
+@media (max-width: 400px) {
+    .particSay {
+        font-size: 1.5em;
+        text-align: center;
+        /* reduced font size and aligned in center the text*/
+
+    }
+}
+
+
+.participants-say-section {
+    /* this contains the image and testimonials */
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* used flexbox layout to arrange child elements verticlly and seperate them by 20px */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* used flex layout, elements stack if they dont fit a line, and centered the items horizontally with gap */
+    width: 100%;
+    max-width: 1200px;
+}
+
+.image-container {
+    flex: 1 1 300px;
+    /* this has the image, and it may shrink and grow, but it has a base of 300 pixels */
+    max-width: 444px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 545px;
+    object-fit: contain;
+    /* maintains its aspect-ratio */
+    border-radius: 8px;
+}
+
+
+
+.testimonials {
+    flex: 2 1 600px;
+    /* this is where the testimonials are, where one testimonial will take up doible the size of the image, and has a base size of 600 pixels */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* they are displayed in vertical columns with gaps between them */
+}
+
+.testimonial-card {
+    /* the styling of each testimonial */
+    background-color: #98ADC7;
+    border-radius: 8px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.participant-name {
+    /* styling of the text of the peoples name */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.testimonial-text {
+    /* styling of the text of what the people said */
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: black;
+    font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        /* the content rearranges into a column layout when the page is under 768 pixels */
+    }
+
+    .image-container {
+        max-width: 100%;
+        /* the image has a maximum width as the whole screen */
+
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        padding: 15px;
+        /* there is less padding */
+    }
+
+    .participant-name {
+        font-size: 1em;
+        /* reduced font size */
+    }
+
+    .testimonial-text {
+        font-size: 0.9em;
+        /* reduced font size */
+    }
+}
+
+/* here ends the styling of testimonials of participants for the company*/
+
+
+
+/* here starts the call to apply to the company */
+
+.start {
+    /* here this styles the text "START YOUR JOURNEY NOW!" which is found below the testimonials */
+    font-size: 3.2em;
+    font-weight: bold;
+    margin-top: 9%;
+    margin-bottom: 5px;
+    margin-left: 2%;
+    /* spacing outside the element to adjust according to the page and elements around it to look neat */
+    color: #0E2B55;
+}
+
+/* responsice styling for the "START YOUR JOURNEY NOW!" text */
+@media (max-width: 900px) {
+    .start {
+        font-size: 2.8em;
+        padding-left: 3%;
+        /* reduced font-size and more padding to the left */
+    }
+}
+
+@media (max-width: 600px) {
+    .start {
+        font-size: 2.3em;
+        /* reduced font size */
+        padding-left: 3%;
+        margin-top: 4%;
+        width: 70%;
+        line-height: 1.5;
+        /* adjustments for more proportional space */
+    }
+
+}
+
+@media (max-width: 400px) {
+    .start {
+        font-size: 1.7em;
+        /* reduced font size */
+        padding-left: 3.5%;
+        margin-top: 1%;
+        width: 60%;
+        /* adjustmetns for better proportional space */
+    }
+
+}
+
+
+/* the styling of the link below the text "START YOUR JOURNEY NOW!" */
+.ctalink2 {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding: 10px 28px;
+    padding-bottom: 10px;
+    /* outside and inside spacing of the element to  look beter */
+    background-color: #ff0000;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    height: 5%;
+    /* gave more height to the element by putting the display as inline block */
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+
+@media (max-width: 900px) {
+    .ctalink2 {
+        margin-left: 5%;
+        /* when the page gets smaller than 900 pixels, the left margin get bigger to be in line with the other elemetns */
+    }
+}
+
+.ctalink2:hover {
+    background-color: rgb(230, 12, 12);
+    transform: scale(1.06);
+    transition: transform 0.5s ease;
+}
+
+/* here ends the call to apply to users for the company section*/
+
+/* here is the image(usa flag) above the footer */
+.flag {
+    width: 100%;
+    height: 250px;
+    margin-top: 2%;
+}
+
+/* here starts the footer section styling */
+
+
+/* here starts the information regarding the location, email, work hours, and phone number of the company */
+.cont1 {
+    /* this is the container for the contact section */
+    background-color: #0E2B55;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: -1%;
+}
+
+.cont2 {
+    /* this is the container for the elements that contain info about the company (info-box) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+    padding-top: 2.5%;
+    width: 95%;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    /* this is an individual box for writing information about the company, where i wrote address, contanct, email, and working hours */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.info-box i {
+    /* this styles the icons that are from a link that is found in the head section */
+    font-size: 40px;
+    color: #1D2B53;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    /* styling of the text inside the boxes*/
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.info-box strong {
+    /* styling of the text inside the boxes */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.email {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/* here ends the styling of information regarding the location, email, work hours, and phone number of the company */
+
+
+/* here continues the footer section styling */
+.col1 {
+    /* this is a flexbox layout container for the footer, found underneath cont1 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E2B55;
+    color: white;
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 0.85em;
+    font-family: Playfair;
+}
+
+.col1 ul {
+    /* styles the unordered list of links */
+    list-style: none;
+    padding: 0;
+}
+
+.col1 ul li {
+    /* styles the lists of the links */
+    margin: 5px 0;
+}
+
+.logo2 {
+    /* styling and dimensions for the company logo */
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.col1mid,
+.col1left {
+    /* devides the footer into columns for navigation and links */
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.col1 a {
+    /* this styles the footer links */
+    color: white;
+    text-decoration: none;
+}
+
+.col1 a:hover {
+    color: lightcoral;
+}
+
+/* responsive styling */
+@media (max-width: 768px) {
+    .cont2 {
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+    }
+
+    .info-box {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .col1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col1 ul {
+        padding: 0;
+    }
+
+    .logo2 {
+        margin-bottom: 20px;
+    }
+}
+
+.copy {
+    /* this is found at the bottom of the page below the footer and used as a copyright notice */
+    width: 100%;
+    height: 11%;
+    color: black;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: 0.9%;
+    padding-top: 0.9%;
+    padding-bottom: 0.9%;
+    margin-left: 2%;
+}
+
+/* responsive styling for the copyright notice at the end of the page*/
+@media (max-width: 500px) {
+    .copy {
+        font-size: 0.7em;
+    }
+}
+
+/* here ends the footer section styling */
+
+
+
+
+/* here we have the styling of the button to go to top of the page */
+
+#backToTop {
+    /* this is the styling of the fixed button that takes you to the top of the page */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 260;
+}
+
+#backToTop:hover {
+    background-color: darkred;
+}
+
+/* responsive styling of the button that takes you to the top of the page */
+@media (max-width: 768px) {
+
+    /* smaller button when the size gets smaller */
+    #backToTop {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+/* here ends the styling of the button to go to top of the page */
